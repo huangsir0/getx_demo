@@ -11,10 +11,16 @@ class CommonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: () {
+        onTap.call();
+      },
       child: Container(
-        height: 40,
-        color: Colors.deepPurpleAccent,
+        height: 60,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.deepPurpleAccent,
+        ),
+        alignment: Alignment.center,
         width: double.infinity,
         child: Text(
           label,
