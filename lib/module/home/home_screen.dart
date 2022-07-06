@@ -3,6 +3,9 @@ import 'package:get/get.dart';
 import 'package:get/get_instance/src/bindings_interface.dart';
 
 import '../../commponents/common_widget.dart';
+import '../../routes/app_pages.dart';
+import '../injection/injection_screen.dart';
+import '../widgets/widget_screen.dart';
 
 part 'home_binding.dart';
 
@@ -25,7 +28,45 @@ class HomeScreen extends StatelessWidget {
             children: [
               CommonWidget(
                 label: "路由管理",
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(Routes.Route);
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              CommonWidget(
+                label: "传值",
+                onTap: () {
+                  Get.toNamed(Routes.PassValueScreen);
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              CommonWidget(
+                label: "状态管理",
+                onTap: () {
+                  Get.toNamed(Routes.StateManageScreen);
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              CommonWidget(
+                label: "依赖注入",
+                onTap: () {
+                  Get.to(() => const InjectionScreen());
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              CommonWidget(
+                label: "小部件",
+                onTap: () {
+                  Get.to(() => const WidgetScreen());
+                },
               ),
             ],
           ),

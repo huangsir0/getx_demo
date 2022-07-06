@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class CommonWidget extends StatelessWidget {
-  const CommonWidget({Key? key, required this.onTap, required this.label})
+  const CommonWidget(
+      {Key? key, required this.onTap, required this.label, this.fontSize = 26})
       : super(key: key);
 
   final Function onTap;
 
   final String label;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class CommonWidget extends StatelessWidget {
         width: double.infinity,
         child: Text(
           label,
-          style: TextStyle(fontSize: 26, color: Colors.white),
+          style: TextStyle(fontSize: fontSize, color: Colors.white),
         ),
       ),
     );
