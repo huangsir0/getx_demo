@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_instance/src/bindings_interface.dart';
+import 'package:getx_demo/module/exam_page.dart';
 
 import '../../commponents/common_widget.dart';
 import '../../routes/app_pages.dart';
@@ -57,6 +58,18 @@ class HomeScreen extends StatelessWidget {
                 label: "依赖注入",
                 onTap: () {
                   Get.to(() => const InjectionScreen());
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              CommonWidget(
+                label: "自动销毁",
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return ExamPage();
+                  }));
                 },
               ),
               const SizedBox(

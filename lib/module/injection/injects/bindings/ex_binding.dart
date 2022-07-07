@@ -4,7 +4,7 @@ class ExBinding extends Bindings {
   @override
   void dependencies() {
     // TODO: implement dependencies
-    Get.put(BindingExController());
-    //  Get.lazyPut(() => BindingExController());
+    //Get.put(BindingExController());
+      Get.lazyPut(() => BindingExController());
   }
 }

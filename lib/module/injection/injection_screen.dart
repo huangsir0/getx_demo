@@ -26,11 +26,11 @@ class InjectionScreen extends StatelessWidget {
                 label: "注入",
                 onTap: () {
                   //lazyPut
-                  // Get.lazyPut<InjectionExController>(
-                  //     () => InjectionExController());
+                  Get.lazyPut<InjectionExController>(
+                      () => InjectionExController());
 
                   // put
-                  Get.put<InjectionExController>(InjectionExController());
+                  //Get.put<InjectionExController>(InjectionExController());
 
                   Get.to(() => InjectionExScreen());
                 },
